@@ -1,118 +1,324 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jakob de Maeyer - na boa</title>
-    <link rel="stylesheet" href="css/naboa.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&family=Nunito:ital,wght@0,400;0,700;1,400&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="static/icon.svg">
+    <style>
+      body {
+        margin: 0;
+        font-family: "Nunito", sans-serif;
+        line-height: 1.6;
+        color: #4a4a4a;
+        text-rendering: optimizeLegibility;
+      }
+
+      h2 {
+        font-size: 1.7rem;
+        font-weight: normal;
+        color: #7a7a7a;
+        margin-bottom: 3rem;
+      }
+
+      strong {
+        color: #363636;
+      }
+
+      a {
+        color: #3273dc;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #363636;
+      }
+
+      aside {
+        color: #9a9a9a;
+      }
+
+      .container {
+        margin: 0 auto;
+        padding: 0 25px;
+        max-width: 850px;
+        text-align: center;
+      }
+
+      .fullscreen {
+        min-height: 100vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .fullscreen .content {
+        flex-grow: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        position: sticky;
+        top: 0;
+      }
+
+      .fullscreen .spacer {
+        flex-grow: 2;
+      }
+
+      #intro {
+        font-size: 1.3rem;
+      }
+
+      #intro p {
+        text-align: justify;
+        hyphens: auto;
+      }
+
+      #intro p.action {
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      #intro .reference {
+        flex-direction: row;
+        column-gap: 3rem;
+        row-gap: 1.5em;
+        margin: 0;
+      }
+
+      #logo {
+        width: 80%;
+        max-width: 300px;
+        margin-bottom: 1rem;
+      }
+
+      hr {
+        height: 1.6rem;
+        background: url("static/ornament.png") no-repeat center;
+        background-size: auto 100%;
+        border: none;
+        margin: 7rem auto;
+      }
+
+      .reference {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 5rem;
+        margin-bottom: 3rem;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .reference:last-child {
+        margin-bottom: 0;
+      }
+
+      .reference:nth-child(odd) {
+        flex-direction: row-reverse;
+      }
+
+      .reference ul {
+        margin-bottom: 0;
+      }
+
+      .reference figure {
+        flex-grow: 0;
+        margin: 0;
+        line-height: 0;
+      }
+
+      .reference figure img {
+        width: 200px;
+      }
+
+      .reference article {
+        width: 400px;
+        flex-grow: 1;
+        text-align: justify;
+        hyphens: auto;
+      }
+
+      footer {
+        background: url("static/naboa.jpg") no-repeat fixed;
+        background-size: cover;
+        background-position: center center;
+        height: 100vh;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+      }
+
+      #banner {
+        position: sticky;
+        bottom: 5vh;
+        padding-top: 5vh;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 1.7rem;
+        color: #fff;
+        text-shadow: 0 0 5px #000;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
 
-    <div id="main">
-
-    <nav class="navbar is-transparent">
-      <div class="container">
-        <div class="navbar-brand">
-          <div class="navbar-item">
-            <a href="https://naboa.de/">
-              <img src="static/logo.png" alt="na boa Logo">
-            </a>
-          </div>
+    <div class="container">
+      <div class="fullscreen">
+        <div class="content">
+          <main id="intro">
+            <h2>
+              <img id="logo" src="static/logo.svg" alt="Introduction">
+            </h2>
+            <p>
+              Olá from beautiful Münster, Germany! I'm <strong>Jakob de Maeyer</strong>, a physicist by training and beach ultimate player by heart who spends his days writing software as a <a href="https://github.com/jdemaeyer">freelance data and product engineer</a>.
+            </p>
+            <div class="reference">
+              <article>
+                The problems I solve are usually heavy on <em>data</em> and <em>algorithms</em>, revolving around
+                <ul>
+                  <li>
+                    acquiring data from a variety of places,
+                    <aside>like ERP databases, websites, or APIs,</aside>
+                  </li>
+                  <li>
+                    mixing, matching, and making sense of it,
+                    <aside>like forecasting sales or highlighting discrepancies,</aside>
+                  </li>
+                  <li>
+                    transforming it in into an easily digestable form,
+                    <aside>like web apps, REST APIs, or pdf reports.</aside>
+                  </li>
+              </article>
+              <figure>
+                <img src="static/jakob.jpg" style="border-radius: 50%">
+              </figure>
+            </div>
+            <p>
+              I love simple solutions, Python, automating the boring stuff, agonizing over elaborate data processing puzzles, and did I mention Python?
+            </p>
+            <p class="action">
+              <strong>Looking to start a project?</strong> <a href="mailto:jakob@naboa.de">Let's talk</a>.
+            </p>
+          </main>
         </div>
-        <div class="navbar-menu">
-          <div class="navbar-end">
-            <a href="#work" class="navbar-item is-size-6 has-text-weight-light">
-              Work
-            </a>
-            <a href="mailto:jakob@naboa.de" class="navbar-item is-size-6 has-text-weight-light is-center">
-              Contact
-            </a>
-          </div>
-        </div>
+        <div class="spacer"></div>
       </div>
-    </nav>
 
-    <section id="intro" class="section">
-      <div class="container">
-        <div style="max-width: 850px">
-          <p class="subtitle is-4">
-            I'm Jakob de Maeyer, a <a href="https://github.com/jdemaeyer">data and product engineer</a> hailing from beautiful Münster, Germany.
-            I love simple solutions, Python, automating the boring stuff, fishing in oceans of data, and did I mention Python?
-          </p>
-          <p class="subtitle is-4">
-            <a name="contact"></a>
-            <strong>Looking to start a project?</strong> <a href="mailto:jakob@naboa.de">Let's talk</a>.
-          </p>
-        </div>
-      </div>
-    </section>
+      <hr>
 
-    <section id="work" class="section">
-      <div class="container">
-        <h1 class="subtitle has-text-grey is-3">
+      <section id="work">
+        <h2>
           Featured work
-        </h1>
-        <div class="columns">
-          <div class="column">
-            <div class="card">
-              <header class="card-header has-background-light">
-                  <figure class="image">
-                    <a href="https://www.foodtracks.de/">
-                      <img src="static/foodtracks.png" alt="FoodTracks logo">
-                    </a>
-                  </figure>
-              </header>
-              <div class="card-content">
-                <div class="content">
-                  <p>
-                    FoodTracks builds web-based controlling solutions for bakeries with a focus on early problem recognition in sales and containing food waste. I've helped them build a pipeline that monitors and loads data from a wild bouquet of client-hosted ERP systems, securely gets it to FoodTracks' site, makes sense of it, normalizes it into a common format, enriches it with external information and custom data models, and finally serves it through a REST interface. As a spin-off of this pipeline we also developed a novel product to track inventory anomalies.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="card">
-              <header class="card-header has-background-light">
-                <figure class="image">
-                  <a href="https://scrapinghub.com/">
-                    <img src="static/scrapinghub.png" alt="Scrapinghub logo">
-                  </a>
-                </figure>
-              </header>
-              <div class="card-content">
-                <div class="content">
-                  Scrapinghub is where I learned the ropes of software development, working autonomously (they're a fully remote 120-person company!), and helping junior developers grow. They provide web scraping and data extraction services, with an open source philosophy in their hearts. Among many other things I started and grew to four full-time developers a solution to collect the inventory of 20+ ticket vendors with single-seat resolution and multiple daily refreshes, managed and lead developed an invite-only SEO scraping product with a customer-facing API, and was lead maintainer of the command line client for Scrapy Cloud, their flagship product.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="card">
-              <header class="card-header has-background-light">
-                <figure class="image">
-                  <a href="http://www.ds.mpg.de/">
-                    <img src="static/mpids.png" alt="Max-Planck-Institut für Dynamik und Selbstorganisation Logo">
-                  </a>
-                </figure>
-              </header>
-              <div class="card-content">
-                <div class="content">
-                  Before my career in software engineering, I studied the marvelous field of Physics, and the Max Planck Institute for Dynamics and Self-Organization is where I finished it off with <a href="https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_2300860">my Master's thesis</a>, for which I built and evaluated a novel experiment tracking 40,000 coalescing oil droplets on water with diameters ranging from 0.01 cm² to 1,000 cm². In the process I developed two open-source projects: one to obtain full-resolution images from consumer-level DSLRs at high frame rates not available in existing software solutions, and another to simplify and modularize the task of batch image processing, in my case using custom computer vision solutions to detect and track the oil droplets.
-                </div>
-              </div>
-            </div>
-          </div>
+        </h2>
+
+        <div class="reference">
+          <figure>
+            <a href="https://www.syntinels.com/">
+              <img src="static/syntinels.png" alt="Syntinels">
+            </a>
+          </figure>
+          <article>
+            <p>
+              <a href="https://www.syntinels.com/">SYNTINELS</a> (formerly <em>SALES2B</em>) is a Münster-based start-up which provides businesses with B2B sales leads based on analysis of their current customer base. Their backbone is an extensive database of metrics for almost all companies active inside Germany, Austria, and Switzerland.
+            </p>
+            <p>
+              To facilitate further expansion of this database, I helped them set up a new data collection platform, wrote solutions to gather information from some tricky origins, and prototyped concepts for on-demand data acquisition.
+            </p>
+          </article>
         </div>
-      </div>
-    </section>
+
+        <div class="reference">
+          <figure>
+            <a href="https://www.bmbf.de/">
+              <img src="static/bmbf.svg" alt="Bundesministerium für Bildung und Forschung">
+            </a>
+          </figure>
+          <article>
+            <p>
+              Among all the software projects I have developed, <a href="https://brightsky.dev/">Bright Sky</a> is probably the one I am the most proud of. Not because it is particularly intricate or ground-breaking (what it does is fairly straightforward), but because it allowed me to give back to the open source community.
+            </p>
+            <p>
+              Bright Sky is a simple and free-to-use JSON API to many of the weather observations published by Germany's meteorological service (DWD). It involves regularly polling the DWD open data server for updates, parsing and normalizing weather observations and forecasts, and finally making the results available in a public-facing API. Bright Sky currently handles more than a million requests daily. It's development was sponsored by the Bundesministerium für Bildung und Forschung as part of the <a href="https://prototypefund.de/">Prototype Fund</a> program.
+            </p>
+          </article>
+        </div>
+
+        <div class="reference">
+          <figure>
+            <a href="http://www.summary-company.com/">
+              <img src="static/summary.png" alt="Summary GmbH">
+            </a>
+          </figure>
+          <article>
+            <p>
+              As a company revolving around developing, importing, and branding products sourced in Southeast Asia, <a href="http://www.summary-company.com/">Summary</a> deals with a metric shit-ton of logistics: from coordinating local suppliers, to constantly tracking the whereabouts of hundreds of containers, to distributing and selling from almost a dozen warehouses.
+            </p>
+            <p>
+              Together we have developed many solutions in three major areas: simplified information management and interactive business intelligence through a new interface to their ERP, automated tracking of fast-changing logistics information like shipment ETAs, and elaborate matching of in-stock or on-the-way goods against a myriad of both customer orders and sales forecasts to guide logistics and purchase decisions.
+            </p>
+          </article>
+        </div>
+
+        <div class="reference">
+          <figure>
+            <a href="https://www.foodtracks.de/">
+              <img src="static/foodtracks.svg" alt="FoodTracks">
+            </a>
+          </figure>
+          <article>
+            <p>
+              Located at Münster's lovely municipal port, working for <a href="https://www.foodtracks.de/">FoodTracks</a> marked the only time in my life where I actually worked from the office of a company I was writing software for. They build web-based controlling solutions for bakeries with a focus on early problem recognition in sales and containing food waste.
+            </p>
+            <p>
+              I was FoodTracks' lead backend developer during their early years and involved in almost all products. At the core of these was a pipeline that monitors and loads data from a wild bouquet of client-hosted ERP systems and securely gets it to FoodTracks' site. From there, the sales data is normalized into a common format, enriched with external information and custom data models, and finally served through REST interfaces, email notifications, or pdf reports.
+            </p>
+          </article>
+        </div>
+
+        <div class="reference">
+          <figure>
+            <a href="https://zyte.com/">
+              <img src="static/scrapinghub.png" alt="Scrapinghub">
+            </a>
+          </figure>
+          <article>
+            <p>
+              <a href="https://zyte.com/">Scrapinghub</a> (nowadays <em>Zyte</em>) is where I learned the ropes of software development, and I am eternally grateful to them. The environment and guidance they provided immensely helped me develop fundamental skills for my software career, like working autonomously (they're a fully remote 200-person company!), making sound architectural choices, and leading teams.
+            </p>
+            <p>
+              Among many other things I started and grew to four full-time developers a solution to collect the inventory of 20+ ticket vendors with single-seat resolution and multiple daily refreshes, managed and lead developed an invite-only SEO scraping product with a customer-facing API, and was lead maintainer of the command line client for Scrapy Cloud, their flagship product.
+            </p>
+          </article>
+        </div>
+
+        <div class="reference">
+          <figure>
+            <a href="http://www.ds.mpg.de/">
+              <img src="static/mpg.svg" alt="Max-Planck-Institut für Dynamik und Selbstorganisation Logo">
+            </a>
+          </figure>
+          <article>
+            <p>
+              Before my career in software engineering, I studied the marvelous field of Physics, and Göttingen's <a href="http://www.ds.mpg.de/">Max Planck Institute for Dynamics and Self-Organization</a> is where I concluded it with <a href="https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_2300860">my Master's thesis</a>. This included building and evaluating a novel experiment tracking 40,000 coalescing oil droplets on water.
+            </p>
+            <p>
+              In the process I developed two software projects: one to obtain full-resolution images from consumer-level DSLRs at high frame rates not available in existing software solutions; another to simplify and modularize the task of batch image processing, in my case using custom computer vision solutions to detect and track the oil droplets.
+            </p>
+          </article>
+        </div>
+      </section>
 
     <hr>
 
     </div>
 
     <footer class="footer">
-      <div id="spacer"></div>
       <div id="banner">
         <span style="display: inline-block; font-family: Raleway; font-weight: 700; font-size: 1.57em">na·boa</span><span style="word-spacing: 0.7em"> </span>
         <span style="display: inline-block">(<i style="margin-left: -2px">Portuguese, slang</i>)</span><span style="word-spacing: .2em"> </span>
