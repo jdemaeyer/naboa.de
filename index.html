@@ -1,330 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jakob de Maeyer - na boa</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&family=Nunito:ital,wght@0,400;0,700;1,400&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&family=Nunito:ital,wght@0,400;0,700;1,400&family=Raleway:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="static/icon.svg">
-    <style>
-      body {
-        margin: 0;
-        font-family: "Nunito", sans-serif;
-        line-height: 1.6;
-        color: #4a4a4a;
-        text-rendering: optimizeLegibility;
-      }
-
-      h2 {
-        font-size: 1.7rem;
-        font-weight: normal;
-        color: #7a7a7a;
-        margin-bottom: 3rem;
-      }
-
-      strong {
-        color: #363636;
-      }
-
-      a {
-        color: #3273dc;
-        text-decoration: none;
-      }
-
-      a:hover {
-        color: #363636;
-      }
-
-      aside {
-        color: #9a9a9a;
-      }
-
-      .container {
-        margin: 0 auto;
-        padding: 0 25px;
-        max-width: 850px;
-        text-align: center;
-      }
-
-      .fullscreen {
-        min-height: 100vh;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .fullscreen .content {
-        flex-grow: 1;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-
-        position: sticky;
-        top: 0;
-      }
-
-      .fullscreen .spacer {
-        flex-grow: 2;
-      }
-
-      #intro {
-        font-size: 1.3rem;
-      }
-
-      #intro p {
-        text-align: justify;
-        hyphens: auto;
-      }
-
-      #intro p.action {
-        margin-top: 3rem;
-        margin-bottom: 1rem;
-        text-align: center;
-      }
-
-      #intro .reference {
-        flex-direction: row;
-        column-gap: 3rem;
-        row-gap: 1.5em;
-        margin: 0;
-      }
-
-      #logo {
-        width: 80%;
-        max-width: 300px;
-        margin-bottom: 1rem;
-      }
-
-      hr {
-        height: 1.6rem;
-        background: url("static/ornament.png") no-repeat center;
-        background-size: auto 100%;
-        border: none;
-        margin: 7rem auto;
-      }
-
-      .reference {
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 5rem;
-        margin-bottom: 3rem;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .reference:last-child {
-        margin-bottom: 0;
-      }
-
-      .reference:nth-child(odd) {
-        flex-direction: row-reverse;
-      }
-
-      .reference ul {
-        margin-bottom: 0;
-      }
-
-      .reference figure {
-        flex-grow: 0;
-        margin: 0;
-        line-height: 0;
-      }
-
-      .reference figure img {
-        width: 200px;
-      }
-
-      .reference article {
-        width: 400px;
-        flex-grow: 1;
-        text-align: justify;
-        hyphens: auto;
-      }
-
-      footer {
-        background: url("static/naboa.jpg") no-repeat fixed;
-        background-size: cover;
-        background-position: center center;
-        height: 100vh;
-        display: flex;
-        align-items: end;
-        justify-content: center;
-      }
-
-      #banner {
-        position: sticky;
-        bottom: 5vh;
-        padding-top: 5vh;
-        font-family: "Josefin Sans", sans-serif;
-        font-size: 1.7rem;
-        color: #fff;
-        text-shadow: 0 0 5px #000;
-        text-align: center;
-      }
-    </style>
+    <link href="/static/naboa.css" rel="stylesheet">
   </head>
-  <body>
-
-    <div class="container">
-      <div class="fullscreen">
-        <div class="content">
-          <main id="intro">
-            <h2>
-              <img id="logo" src="static/logo.svg" alt="Introduction">
-            </h2>
-            <p>
-              Olá from beautiful Münster, Germany! I'm <strong>Jakob de Maeyer</strong>, a physicist by training and beach ultimate player by heart who spends his days writing software as a <a href="https://github.com/jdemaeyer">freelance data and product engineer</a>.
-            </p>
-            <div class="reference">
-              <article>
-                The problems I solve are usually heavy on <em>data</em> and <em>algorithms</em>, revolving around
-                <ul>
-                  <li>
-                    acquiring data from a variety of places,
-                    <aside>like ERP databases, websites, or APIs,</aside>
-                  </li>
-                  <li>
-                    mixing, matching, and making sense of it,
-                    <aside>like forecasting sales or highlighting discrepancies,</aside>
-                  </li>
-                  <li>
-                    transforming it in into an easily digestable form,
-                    <aside>like web apps, REST APIs, or pdf reports.</aside>
-                  </li>
-              </article>
-              <figure>
-                <img src="static/jakob.jpg" style="border-radius: 50%">
-              </figure>
+  <body class="font-body text-shadow">
+    <div class="w-full h-svh bg-cover bg-center bg-[url('/static/naboa.jpg')] flex flex-col p-4">
+      <div class="flex-1 flex items-center justify-center animate-[slideIn_.5s_ease-in-out]">
+        <div class="w-full max-w-screen-lg bg-black/75 text-slate-200 rounded-3xl p-8 md:p-16 shadow-xl">
+          <div class="flex flex-col items-center md:flex-row gap-8">
+            <div class="flex-1 flex flex-col items-center md:items-start mb-8 md:mb-0">
+              <img src="static/jakob.jpg" class="size-40 rounded-full mb-10 shadow-md shadow-white/20">
+              <h1 class="text-3xl md:text-4xl font-display font-semibold tracking-wide mb-4">Jakob de Maeyer</h1>
+              <h2 class="text-lg md:text-xl font-display font-bold tracking-widest text-gray-500">PRODUCT ENGINEER</h2>
             </div>
-            <p>
-              I love simple solutions, Python, automating the boring stuff, agonizing over elaborate data processing puzzles, and did I mention Python?
-            </p>
-            <p class="action">
-              <strong>Looking to start a project?</strong> <a href="mailto:jakob@naboa.de">Let's talk</a>.
-            </p>
-          </main>
+            <div class="flex flex-col gap-4 md:gap-8 justify-center w-full max-w-64 lg:max-w-80 text-xl md:text-2xlfont-display text-gray-300">
+              <a class="flex w-full bg-gradient-to-r from-slate-700/90 to-slate-900/90 hover:bg-slate-600/90 border-slate-700 rounded-xl px-8 py-3 gap-2 items-center shadow-inner shadow-white/20" href="https://github.com/jdemaeyer/">
+                <span class="flex-1 mt-1">GitHub</span>
+                <svg fill="currentColor" viewBox="0 0 32 32" class="size-8 text-slate-400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 1.375c-8.282 0-14.996 6.714-14.996 14.996 0 6.585 4.245 12.18 10.148 14.195l0.106 0.031c0.75 0.141 1.025-0.322 1.025-0.721 0-0.356-0.012-1.3-0.019-2.549-4.171 0.905-5.051-2.012-5.051-2.012-0.288-0.925-0.878-1.685-1.653-2.184l-0.016-0.009c-1.358-0.93 0.105-0.911 0.105-0.911 0.987 0.139 1.814 0.718 2.289 1.53l0.008 0.015c0.554 0.995 1.6 1.657 2.801 1.657 0.576 0 1.116-0.152 1.582-0.419l-0.016 0.008c0.072-0.791 0.421-1.489 0.949-2.005l0.001-0.001c-3.33-0.375-6.831-1.665-6.831-7.41-0-0.027-0.001-0.058-0.001-0.089 0-1.521 0.587-2.905 1.547-3.938l-0.003 0.004c-0.203-0.542-0.321-1.168-0.321-1.821 0-0.777 0.166-1.516 0.465-2.182l-0.014 0.034s1.256-0.402 4.124 1.537c1.124-0.321 2.415-0.506 3.749-0.506s2.625 0.185 3.849 0.53l-0.1-0.024c2.849-1.939 4.105-1.537 4.105-1.537 0.285 0.642 0.451 1.39 0.451 2.177 0 0.642-0.11 1.258-0.313 1.83l0.012-0.038c0.953 1.032 1.538 2.416 1.538 3.937 0 0.031-0 0.061-0.001 0.091l0-0.005c0 5.761-3.505 7.029-6.842 7.398 0.632 0.647 1.022 1.532 1.022 2.509 0 0.093-0.004 0.186-0.011 0.278l0.001-0.012c0 2.007-0.019 3.619-0.019 4.106 0 0.394 0.262 0.862 1.031 0.712 6.028-2.029 10.292-7.629 10.292-14.226 0-8.272-6.706-14.977-14.977-14.977-0.006 0-0.013 0-0.019 0h0.001z"></path>
+                </svg>
+              </a>
+              <a class="flex w-full bg-gradient-to-r from-sky-700/80 to-sky-900/80 hover:bg-sky-700/90 border border-gray-700 rounded-xl px-8 py-3 gap-2 items-center shadow-inner shadow-white/20" href="https://www.linkedin.com/in/jakob-de-maeyer/">
+                <span class="flex-1 mt-1">LinkedIn</span>
+                <svg viewBox="0 0 20 20" class="text-sky-500 size-6 mr-0.5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor"><g transform="translate(-180.000000, -7479.000000)" fill="currentColor"> <g id="icons" transform="translate(56.000000, 160.000000)"><path d="M144,7339 L140,7339 L140,7332.001 C140,7330.081 139.153,7329.01 137.634,7329.01 C135.981,7329.01 135,7330.126 135,7332.001 L135,7339 L131,7339 L131,7326 L135,7326 L135,7327.462 C135,7327.462 136.255,7325.26 139.083,7325.26 C141.912,7325.26 144,7326.986 144,7330.558 L144,7339 L144,7339 Z M126.442,7323.921 C125.093,7323.921 124,7322.819 124,7321.46 C124,7320.102 125.093,7319 126.442,7319 C127.79,7319 128.883,7320.102 128.883,7321.46 C128.884,7322.819 127.79,7323.921 126.442,7323.921 L126.442,7323.921 Z M124,7339 L129,7339 L129,7326 L124,7326 L124,7339 Z"> </path></g></g>
+                </svg>
+              </a>
+              <a class="flex w-full bg-gradient-to-r from-teal-700/80 to-teal-900/80 hover:bg-teal-700/90 border-gray-700 rounded-xl px-8 py-3 gap-2 items-center shadow-inner shadow-white/20" href="mailto:jakob@naboa.de">
+                <span class="flex-1 mt-1">Email</span>
+                <svg viewBox="0 0 24 24" class="text-teal-600 size-8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></rect></svg>
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="spacer"></div>
       </div>
-
-      <hr>
-
-      <section id="work">
-        <h2>
-          Featured work
-        </h2>
-
-        <div class="reference">
-          <figure>
-            <a href="https://www.syntinels.com/">
-              <img src="static/syntinels.png" alt="Syntinels">
-            </a>
-          </figure>
-          <article>
-            <p>
-              <a href="https://www.syntinels.com/">SYNTINELS</a> (formerly <em>SALES2B</em>) is a Münster-based start-up which provides businesses with B2B sales leads based on analysis of their current customer base. Their backbone is an extensive database of metrics for almost all companies active inside Germany, Austria, and Switzerland.
-            </p>
-            <p>
-              To facilitate further expansion of this database, I helped them set up a new data collection platform, wrote solutions to gather information from some tricky origins, and prototyped concepts for on-demand data acquisition.
-            </p>
-          </article>
-        </div>
-
-        <div class="reference">
-          <figure>
-            <a href="https://www.bmbf.de/">
-              <img src="static/bmbf.svg" alt="Bundesministerium für Bildung und Forschung">
-            </a>
-          </figure>
-          <article>
-            <p>
-              Among all the software projects I have developed, <a href="https://brightsky.dev/">Bright Sky</a> is probably the one I am the most proud of. Not because it is particularly intricate or ground-breaking (what it does is fairly straightforward), but because it allowed me to give back to the open source community.
-            </p>
-            <p>
-              Bright Sky is a simple and free-to-use JSON API to many of the weather observations published by Germany's meteorological service (DWD). It involves regularly polling the DWD open data server for updates, parsing and normalizing weather observations and forecasts, and finally making the results available in a public-facing API. Bright Sky currently handles more than a million requests daily. It's development was sponsored by the Bundesministerium für Bildung und Forschung as part of the <a href="https://prototypefund.de/">Prototype Fund</a> program.
-            </p>
-          </article>
-        </div>
-
-        <div class="reference">
-          <figure>
-            <a href="http://www.summary-company.com/">
-              <img src="static/summary.png" alt="Summary GmbH">
-            </a>
-          </figure>
-          <article>
-            <p>
-              As a company revolving around developing, importing, and branding products sourced in Southeast Asia, <a href="http://www.summary-company.com/">Summary</a> deals with a metric shit-ton of logistics: from coordinating local suppliers, to constantly tracking the whereabouts of hundreds of containers, to distributing and selling from almost a dozen warehouses.
-            </p>
-            <p>
-              Together we have developed many solutions in three major areas: simplified information management and interactive business intelligence through a new interface to their ERP, automated tracking of fast-changing logistics information like shipment ETAs, and elaborate matching of in-stock or on-the-way goods against a myriad of both customer orders and sales forecasts to guide logistics and purchase decisions.
-            </p>
-          </article>
-        </div>
-
-        <div class="reference">
-          <figure>
-            <a href="https://www.foodtracks.de/">
-              <img src="static/foodtracks.svg" alt="FoodTracks">
-            </a>
-          </figure>
-          <article>
-            <p>
-              Located at Münster's lovely municipal port, working for <a href="https://www.foodtracks.de/">FoodTracks</a> marked the only time in my life where I actually worked from the office of a company I was writing software for. They build web-based controlling solutions for bakeries with a focus on early problem recognition in sales and containing food waste.
-            </p>
-            <p>
-              I was FoodTracks' lead backend developer during their early years and involved in almost all products. At the core of these was a pipeline that monitors and loads data from a wild bouquet of client-hosted ERP systems and securely gets it to FoodTracks' site. From there, the sales data is normalized into a common format, enriched with external information and custom data models, and finally served through REST interfaces, email notifications, or pdf reports.
-            </p>
-          </article>
-        </div>
-
-        <div class="reference">
-          <figure>
-            <a href="https://zyte.com/">
-              <img src="static/scrapinghub.png" alt="Scrapinghub">
-            </a>
-          </figure>
-          <article>
-            <p>
-              <a href="https://zyte.com/">Scrapinghub</a> (nowadays <em>Zyte</em>) is where I learned the ropes of software development, and I am eternally grateful to them. The environment and guidance they provided immensely helped me develop fundamental skills for my software career, like working autonomously (they're a fully remote 200-person company!), making sound architectural choices, and leading teams.
-            </p>
-            <p>
-              Among many other things I started and grew to four full-time developers a solution to collect the inventory of 20+ ticket vendors with single-seat resolution and multiple daily refreshes, managed and lead developed an invite-only SEO scraping product with a customer-facing API, and was lead maintainer of the command line client for Scrapy Cloud, their flagship product.
-            </p>
-          </article>
-        </div>
-
-        <div class="reference">
-          <figure>
-            <a href="http://www.ds.mpg.de/">
-              <img src="static/mpg.svg" alt="Max-Planck-Institut für Dynamik und Selbstorganisation Logo">
-            </a>
-          </figure>
-          <article>
-            <p>
-              Before my career in software engineering, I studied the marvelous field of Physics, and Göttingen's <a href="http://www.ds.mpg.de/">Max Planck Institute for Dynamics and Self-Organization</a> is where I concluded it with <a href="https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_2300860">my Master's thesis</a>. This included building and evaluating a novel experiment tracking 40,000 coalescing oil droplets on water.
-            </p>
-            <p>
-              In the process I developed two software projects: one to obtain full-resolution images from consumer-level DSLRs at high frame rates not available in existing software solutions; another to simplify and modularize the task of batch image processing, in my case using custom computer vision solutions to detect and track the oil droplets.
-            </p>
-          </article>
-        </div>
-      </section>
-
-    <hr>
-
+      <footer class="my-8 xl:my-12 text-[1.2rem] md:text-[1.7rem] text-white w-full text-center">
+        <span class="inline-block font-display font-bold text-[1.57em]">na·boa</span><span style="word-spacing: 0.7em"> </span>
+        <span class="inline-block font-emph">(<i>Portuguese, slang</i>)</span><span style="word-spacing: .2em"> </span>
+        <span class="inline-block font-emph">fine, tranquil, not worried, relaxed</span>
+      </footer>
     </div>
-
-    <footer class="footer">
-      <div id="banner">
-        <span style="display: inline-block; font-family: Raleway; font-weight: 700; font-size: 1.57em">na·boa</span><span style="word-spacing: 0.7em"> </span>
-        <span style="display: inline-block">(<i style="margin-left: -2px">Portuguese, slang</i>)</span><span style="word-spacing: .2em"> </span>
-        <span style="display: inline-block">fine, tranquil, not worried, relaxed</span>
-      </div>
-    </footer>
-
   </body>
 </html>
+
